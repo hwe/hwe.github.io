@@ -6,7 +6,10 @@
 <script>
 	function validateForm() {
     var x = document.forms["myForm"]["fname"].value;
-    if (x != "The crown & two chairmen") {
+    if (x == "The crown & two chairmen") {
+    	document.getElementById('theImage').src="./Slide2.PNG";
+    	//document.getElementById('myForm').removeChild('inputText');
+    	//document.getElementById('myForm').removeChild('inputButton');
         return false;
     }
 }
@@ -14,10 +17,10 @@
 </head>
 
 <body>
-<img src="./Slide1.PNG" alt="...">
+<img id="theImage" src="./Slide1.PNG" alt="...">
 </body>
 
- <form name="myForm" action="lnd.html" onsubmit="return validateForm()">
+ <form name="myForm" onsubmit="return validateForm()">
 <input type="text" name="fname">
 <input type="submit" value="Submit">
 </form>
