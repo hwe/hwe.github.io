@@ -8,8 +8,6 @@
     var x = document.forms["myForm"]["fname"].value;
     if (x == "The crown & two chairmen") {
     	document.getElementById('theImage').src="./Slide2.PNG";
-    	//document.getElementById('myForm').removeChild('inputText');
-    	//document.getElementById('myForm').removeChild('inputButton');
         return false;
     }
 }
@@ -20,9 +18,9 @@
 <img id="theImage" src="./Slide1.PNG" alt="...">
 </body>
 
- <form name="myForm" onsubmit="return validateForm()">
+ <form name="myForm">
 <input type="text" name="fname">
-<input type="submit" value="Submit">
+ <button onclick="validateForm()">Click me</button> 
 </form>
 
 </html>
