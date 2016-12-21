@@ -8,6 +8,7 @@
     var x = document.forms["myForm"]["fname"].value;
     if (x == "The crown & two chairmen") {
     	document.getElementById('theImage').src="./Slide2.PNG";
+    	window.scrollTo(0, 0);
         return false;
     }
 }
@@ -19,7 +20,7 @@
 </body>
 
  <form name="myForm" onsubmit="return validateForm()">
-<input type="text" name="fname">
+<input type="text" name="fname" size="40">
 <input type="submit" value="Submit">
 </form>
 
