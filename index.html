@@ -3,12 +3,27 @@
 <html>
 
 <head>
+<style>
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+.center {
+    margin: auto;
+    width: 85%;
+}
+input {
+	font-size:20px;
+}
+</style>
 <script>
 	function validateForm() {
     var x = document.forms["myForm"]["fname"].value;
     if (x == "The crown & two chairmen") {
+    	//location.reload();
     	document.getElementById('theImage').src="./Slide2.PNG";
-    	window.scrollTo(0, 0);
+    	//window.scrollTo(0, 0);
         return false;
     }
 }
@@ -16,12 +31,14 @@
 </head>
 
 <body>
+<div class="center">
 <img id="theImage" src="./Slide1.PNG" alt="...">
-</body>
+
 
  <form name="myForm" onsubmit="return validateForm()">
-<input type="text" name="fname" size="40">
+<input type="text" name="fname" size="25">
 <input type="submit" value="Submit">
 </form>
-
+</div>
+</body>
 </html>
