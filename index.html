@@ -9,6 +9,11 @@ img {
     height: auto;
     width: auto\9; /* ie8 */
 }
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 .center {
     margin: auto;
     width: 95%;
@@ -33,7 +38,7 @@ input {
 
 <body>
 <div class="center">
-<img id="theImage" src="./Slide1.PNG" alt="...">
+<img id="theImage" class="center" src="./Slide1.PNG" alt="...">
 
 
  <form name="myForm" onsubmit="return validateForm()">
