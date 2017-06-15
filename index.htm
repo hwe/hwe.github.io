@@ -1,0 +1,54 @@
+<style>
+  
+  p { 
+  line-height: 90px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 1.5em;
+  }
+
+</style>
+
+<p id="demo"></p>
+
+<script>
+
+var restaurants = ["zur Markthalle", "zum Suppenladen", "zu Lieblingsplatz", "zu Andronacco", "zum Schanzenb\u00e4cker"];
+var rand = Math.floor(Math.random()*9);
+switch (rand) {
+  case 0:
+  case 1:
+    var index = 0;
+    break;
+  case 2:
+  case 3:
+    var index = 1;
+    break;
+  case 4:
+    var index = 2;
+    break;
+  case 5:
+    var index = 3;
+    break;
+  default:
+    var index = 4;
+    break;
+}
+
+var today_restaurant = restaurants[index];
+
+// Set the counter start value
+var counter = 6;
+// Update the count down every 1 second
+var x = setInterval(function() {
+  counter--;
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = "Counter: " + counter;
+  // If the count down is finished, write some text 
+  if (counter == 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "Heute geht es " + today_restaurant;
+  }
+}, 1000);
+
+</script>
