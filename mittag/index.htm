@@ -68,6 +68,8 @@ switch (rand) {
 }
 
 var today_restaurant = restaurants[index];
+var date = new Date();
+var weekday = date.getDay();
 
 // Set the counter start value
 var counter = 6;
@@ -87,7 +89,11 @@ var x = setInterval(function() {
   // If the count down is finished, write some text 
   else if (counter == 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "Heute geht es " + today_restaurant;
+    if (weekday == 2) {
+    	document.getElementById("demo").innerHTML = "Heute geht es zum Markt <br/><br/> (Mir doch egal, ob es regnet oder schneit!)";
+    } else {
+    	document.getElementById("demo").innerHTML = "Heute geht es " + today_restaurant;
+    }
   }
 }, 1000);
 }
